@@ -22,6 +22,9 @@ from utils import check_folder
 import tensorflow as tf
 import argparse
 
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"   # see issue #152
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
+
 """parsing and configuration"""
 def parse_args():
     desc = "Tensorflow implementation of GAN collections"
